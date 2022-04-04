@@ -1,0 +1,280 @@
+.header{
+    background-color: #8cacc5;
+    height: 110px;
+    width: 600px;
+    margin-left: 120px;
+    display: inline-flex;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.button {
+    border: 1px solid #d3e3fc; 
+    padding: 20px;
+    background-color: #b0cccf; 
+    color: #ffffff; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: 'Times New Roman', Times, serif; 
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 30px;
+    }
+    .carousel{
+        height: 250px;
+        width: 400px;
+        margin-right: 30px;
+        float: right;
+        margin-top: 100px;
+
+    }
+    .vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+
+.container{
+    margin-top: 20px;
+    margin-left: 10px;
+    
+    
+    
+}
+.boton{
+    width: 400px;
+    margin-top: 1px;
+    padding: 30px;
+    text-align: center;
+    background-color: #9f9691;
+    margin-left: 220px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.linea1{
+    transition: transform .5s;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.linea1:hover{
+    padding: 10px;
+    margin-left: 200px;
+    transform: scale(1.1);
+    margin-top: 50px;
+}
+.linea2:hover{
+    padding: 10px;
+    margin-left: 200px;
+    transform: scale(1.1);
+}
+.linea2{
+    transition: transform .5s;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #babec5;
+}
+.contenido{
+    width: 510px;
+    margin-left: 50px;}
+
+.lbl-menu{
+    background: rgb(59, 80, 102);
+    width: 300px;
+    margin-top: 20px;
+}
+.lbl-menu label{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 20px;
+    color: #fff;
+    cursor: cell;
+    transition: all 400ms ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.lbl-menu label:hover{
+    background: #28435d;
+}
+.content{
+    position: relative;
+}
+.content div{
+    position: absolute;
+    line-height: 2.0;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    padding: 38px;
+    background: #fff;
+    padding-bottom: 40px;
+}
+#radio1,#radio2,#radio3,#radio4{
+    display: none;
+}
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.content div:after{
+    position: absolute;
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    bottom: 100%;
+    left: 28px;
+}
+.content .tab2:after{
+    left: 122px;
+}
+.content .tab3:after{
+    left: 210px;
+}
+.content .tab4:after{
+    left: 303px;
+}
+*, *:before, *:after {
+    padding: 0px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg-calendar: #692b6b;
+    --color-cell: #ffffff;
+    --color-cell-disabled: #797878;
+}
+
+.root {
+    min-height: 100vh;  
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    padding: 20px 15px;
+    background-color: var(--color-bg-calendar);
+    width: 430px;
+    margin-left: 550px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.calendar__header {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.calendar .control {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.grid__header, .grid__body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid__header {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.grid__body {
+    grid-auto-rows: 40px;
+    color: var(--color-cell);
+}
+
+.grid__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__cell--gd {
+    cursor: pointer;
+}
+
+.grid__cell--selected {
+    color: var(--color-bg-calendar);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+}
+
+.grid__cell--disabled {
+    color: var(--color-cell-disabled);
+    cursor: not-allowed;
+}
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: rgb(236, 30, 30); /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
